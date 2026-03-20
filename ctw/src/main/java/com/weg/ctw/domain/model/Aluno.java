@@ -31,8 +31,7 @@ public class Aluno {
     @Column(unique = true, nullable = false)
     private String email;
 
-    // Relacionamento: Muitos alunos pertencem a uma turma
-    // @ManyToOne
+   @ManyToOne
     @JoinColumn(name = "id_turma", nullable = false)
     private Turma turma;
 }

@@ -21,15 +21,19 @@ public class Aula {
     @Column(name = "duracao_min", nullable = false)
     private Integer duracaoMin;
 
+    @ManyToOne
     @JoinColumn(name = "id_sala", nullable = false)
     private Sala sala;
 
+    @ManyToOne
     @JoinColumn(name = "id_materia", nullable = false)
     private Materia materia;
 
+    @ManyToOne
     @JoinColumn(name = "id_turma", nullable = false)
     private Turma turma;
 
+    @ManyToOne
     @JoinColumn(name = "id_professor", nullable = false)
     private Professor professor;
 }
