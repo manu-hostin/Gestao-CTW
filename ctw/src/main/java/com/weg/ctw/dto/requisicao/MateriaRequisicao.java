@@ -1,8 +1,9 @@
 package com.weg.ctw.dto.requisicao;
 
-public record MateriaRequisicao() {
-}
+import jakarta.validation.constraints.NotBlank;
 
-//int id
-//String nome
-//int carga_horaria
+public record MateriaRequisicao(
+        @NotBlank(message = "O nome da matéria é obrigatório")
+        String nome
+) {
+}

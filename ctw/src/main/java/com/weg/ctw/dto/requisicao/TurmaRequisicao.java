@@ -1,10 +1,11 @@
 package com.weg.ctw.dto.requisicao;
 
-public record TurmaRequisicao() {
-}
+import com.weg.ctw.domain.model.Turma;
 
-//int id
-//String nome
-//int numero
-//enum carga_horaria (“SEIS HORAS” , “OITO HORAS”)
-//enum duracao (“1 ANO” , “2 ANOS”)
+public record TurmaRequisicao(
+        String nome,
+        int numero,
+        Turma.CargaHoraria cargaHoraria,
+        Turma.Duracao duracao
+) {
+}
