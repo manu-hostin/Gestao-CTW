@@ -1,4 +1,4 @@
 package com.weg.ctw.domain.repository;
 
-public class MateriaRepo {
+public interface MateriaRepo {
 }
