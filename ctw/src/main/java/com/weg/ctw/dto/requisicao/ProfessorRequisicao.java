@@ -1,11 +1,13 @@
 package com.weg.ctw.dto.requisicao;
 
-public record ProfessorRequisicao() {
-}
+import com.weg.ctw.domain.model.Professor;
+import java.util.Date;
 
-///int id
-//String nome
-//String email
-//Date data_nascimento
-//String cpf
-//enum instituicao (“WEG”, “SENAI”)
+public record ProfessorRequisicao(
+        String nome,
+        String email,
+        Date dataNascimento,
+        String cpf,
+        Professor.Instituicao instituicao
+) {}
+
