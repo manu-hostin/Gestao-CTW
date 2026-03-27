@@ -1,6 +1,7 @@
 package com.weg.ctw.service;
 
 import com.weg.ctw.domain.model.Professor;
+import com.weg.ctw.domain.model.Turma;
 import com.weg.ctw.domain.repository.IProfessorRepo;
 import com.weg.ctw.domain.strategy.IProfessorStrategy;
 import com.weg.ctw.dto.requisicao.ProfessorRequisicao;
@@ -27,5 +28,14 @@ public class ProfessorService {
                 .validar(professor);
 
         return repository.salvar(professor);
+    }
+
+    public List<Professor> listarProfessores () {
+        return repository.listarProfessores();
+    }
+
+    public Professor buscarPorId(Integer id) {
+        return repository.buscarPorID(id)
+                .orElseThrow(() -> new RuntimeException("Professor não encontrado com o ID: " + id));
     }
 }
