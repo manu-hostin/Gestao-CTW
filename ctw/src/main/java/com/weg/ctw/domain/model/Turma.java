@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "turma")
 @AllArgsConstructor
@@ -32,6 +34,11 @@ public class Turma {
     @Column(name = "duracao", nullable = false)
     private Duracao duracao;
 
+    @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
+    private List<Aluno> alunos;
+
+    @OneToMany(mappedBy = "turma")
+    private List<Aula> aulas;
 
     public enum CargaHoraria{
         SEIS_HORAS,

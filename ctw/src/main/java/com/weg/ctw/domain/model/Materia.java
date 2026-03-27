@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "materia")
 @AllArgsConstructor
@@ -24,5 +26,11 @@ public class Materia {
     @Column (nullable = false)
     private Integer cargaHoraria;
 
+
+    @OneToMany(mappedBy = "materia")
+    private List<Aula> aulas;
+
+    @OneToMany(mappedBy = "materia")
+    private List<Nota> notas;
 
 }

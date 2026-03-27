@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table (name = "professor")
@@ -24,7 +25,7 @@ public class Professor {
     private Integer id;
 
     @Column(nullable = false)
-    private String nome;
+    private String nomeCompleto;
 
     @Column(nullable = false)
     private String email;
@@ -40,6 +41,8 @@ public class Professor {
     @Column(name = "instituicao", nullable = false)
     private Instituicao instituicao;
 
+    @OneToMany(mappedBy = "professor")
+    private List<Aula> aulas;
 
     public enum Instituicao{
         WEG,

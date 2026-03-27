@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -22,7 +23,7 @@ public class Aluno {
     private Integer id;
 
     @Column(nullable = false)
-    private String nome;
+    private String nomeCompleto;
 
     @Column(name = "data_nascimento")
     @Temporal(TemporalType.DATE) // Define que no banco será apenas YYYY-MM-DD
@@ -31,7 +32,10 @@ public class Aluno {
     @Column(unique = true, nullable = false)
     private String email;
 
-   @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "id_turma", nullable = false)
     private Turma turma;
+
+    @OneToMany(mappedBy = "aluno")
+    private List<Nota> notas;
 }

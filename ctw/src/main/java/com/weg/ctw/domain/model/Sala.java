@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "sala")
 @AllArgsConstructor
@@ -30,6 +32,9 @@ public class Sala {
 
     @Column(nullable = false)
     private boolean revisada;
+
+    @OneToMany(mappedBy = "sala")
+    private List<Aula> aulas;
 
     public enum TipoSala {
         LABORATÓRIO,
