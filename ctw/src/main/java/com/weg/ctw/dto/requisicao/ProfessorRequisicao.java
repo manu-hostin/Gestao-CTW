@@ -8,6 +8,6 @@ public record ProfessorRequisicao(
         String email,
         Date dataNascimento,
         String cpf,
+        String tipoRegime,
         Professor.Instituicao instituicao
 ) {}
-

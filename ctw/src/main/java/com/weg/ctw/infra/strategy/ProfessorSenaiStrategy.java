@@ -8,15 +8,14 @@ import org.springframework.stereotype.Component;
 public class ProfessorSenaiStrategy implements IProfessorStrategy {
 
     @Override
-    public boolean isWegOuSenai(Professor.Instituicao instituicao) {
-        return instituicao == Professor.Instituicao.SENAI;
+    public boolean isTipo(String tipo) {
+        return "SENAI".equalsIgnoreCase(tipo);
     }
 
     @Override
     public void validar(Professor professor) {
-
-        if (professor.getCpf().length() < 11) {
-            throw new RuntimeException("CPF incompleto para cadastro SENAI.");
+        if (professor.getNomeCompleto().length() < 10) {
+            throw new RuntimeException("Cadastro SENAI exige nome completo sem abreviações!");
         }
     }
 }

@@ -11,7 +11,6 @@ import java.util.Optional;
 @AllArgsConstructor
 public class SalaRepoImpl implements ISalaRepo {
 
-    // Injetamos a interface do JPA aqui (Composição)
     private final JpaSalaRepo jpa;
 
     @Override

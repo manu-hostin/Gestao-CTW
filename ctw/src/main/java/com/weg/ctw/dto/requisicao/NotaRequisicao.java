@@ -1,11 +1,19 @@
 package com.weg.ctw.dto.requisicao;
 
-public record NotaRequisicao() {
-}
+import com.weg.ctw.domain.model.Nota;
+import jakarta.validation.constraints.NotNull;
 
-//int id
-//int id_aluno
-//int id_materia
-//double valor_nota
-//enum tipo (“PRATICA”, “OBJETIVA”, “DESCRITIVA”)
-//enum finalidade (“REGULAR”, “RECUPERAÇÃO”, “EXAME”)
+public record NotaRequisicao(
+
+        @NotNull
+        Integer idAluno,
+        @NotNull
+        Integer idMateria,
+        @NotNull
+        Double valor,
+        @NotNull
+        Nota.TipoNota tipo,
+        @NotNull
+        Nota.Finalidade finalidade
+) {
+}

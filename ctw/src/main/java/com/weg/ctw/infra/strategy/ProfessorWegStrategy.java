@@ -8,14 +8,15 @@ import org.springframework.stereotype.Component;
 public class ProfessorWegStrategy implements IProfessorStrategy {
 
     @Override
-    public boolean isWegOuSenai(Professor.Instituicao instituicao) {
-        return instituicao == Professor.Instituicao.WEG;
+    public boolean isTipo(String tipo) {
+        return "WEG".equalsIgnoreCase(tipo);
     }
 
     @Override
     public void validar(Professor professor) {
-        if (!professor.getEmail().contains("@weg.net")) {
-            throw new RuntimeException("E-mail inválido para padrão WEG.");
+
+        if (!professor.getEmail().endsWith("@weg.net")) {
+            throw new RuntimeException("Professor WEG deve usar email @weg.net");
         }
     }
 }

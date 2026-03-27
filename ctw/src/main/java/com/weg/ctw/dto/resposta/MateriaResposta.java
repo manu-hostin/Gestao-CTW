@@ -1,4 +1,6 @@
 package com.weg.ctw.dto.resposta;
 
-public class MateriaResposta {
-}
+public record MateriaResposta(
+        Integer id,
+        String nome
+) {}

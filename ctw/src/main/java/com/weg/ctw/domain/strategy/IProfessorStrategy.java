@@ -4,7 +4,8 @@ import com.weg.ctw.domain.model.Professor;
 
 public interface IProfessorStrategy {
 
-    boolean isWegOuSenai (Professor.Instituicao instituicao);
+    boolean isTipo(String tipo);
 
-    void validar (Professor professor);
+    void validar(Professor professor);
 }
+

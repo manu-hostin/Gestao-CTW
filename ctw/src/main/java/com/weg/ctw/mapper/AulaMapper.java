@@ -2,6 +2,7 @@ package com.weg.ctw.mapper;
 
 import com.weg.ctw.domain.model.*;
 import com.weg.ctw.dto.requisicao.AulaRequisicao;
+import com.weg.ctw.dto.resposta.AulaResposta;
 
 public class AulaMapper {
 
@@ -16,5 +17,16 @@ public class AulaMapper {
 
         return aula;
     }
+    public static AulaResposta paraResposta(Aula aula) {
+        return new AulaResposta(
+                aula.getId(),
+                aula.getDuracaoMin(),
+                aula.getMateria().getNome(),
+                aula.getSala().getNumeroSala(),
+                aula.getProfessor().getNomeCompleto(),
+                aula.getTurma().getNome()
+        );
+    }
+
 
 }

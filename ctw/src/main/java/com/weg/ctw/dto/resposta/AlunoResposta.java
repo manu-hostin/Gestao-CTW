@@ -1,4 +1,8 @@
 package com.weg.ctw.dto.resposta;
 
-public class AlunoResposta {
-}
+public record AlunoResposta(
+        Integer id,
+        String nomeCompleto,
+        String email,
+        String nomeTurma
+) {}
