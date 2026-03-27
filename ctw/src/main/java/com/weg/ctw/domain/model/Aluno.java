@@ -26,7 +26,7 @@ public class Aluno {
     private String nomeCompleto;
 
     @Column(name = "data_nascimento")
-    @Temporal(TemporalType.DATE) // Define que no banco será apenas YYYY-MM-DD
+    @Temporal(TemporalType.DATE)
     private Date dataNascimento;
 
     @Column(unique = true, nullable = false)
