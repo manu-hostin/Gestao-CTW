@@ -17,7 +17,7 @@ import java.util.List;
 public class Sala {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column(nullable = false)
@@ -37,10 +37,8 @@ public class Sala {
     private List<Aula> aulas;
 
     public enum TipoSala {
-        LABORATÓRIO,
-        SALA_PRÁTICA,
+        LABORATORIO,
+        SALA_PRATICA,
         SALA_DE_AULA
     }
-
-
 }

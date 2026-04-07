@@ -23,7 +23,7 @@ public class ProfessorService {
         Professor professor = ProfessorMapper.paraEntidade(dto);
 
         for (IProfessorStrategy s : estrategias) {
-            if (s.isTipo(dto.tipoRegime())) {
+            if (s.isTipo(dto.instituicao().name())) {
                 s.validar(professor);
             }
         }

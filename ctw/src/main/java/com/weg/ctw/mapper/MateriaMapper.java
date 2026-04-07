@@ -9,6 +9,7 @@ public class MateriaMapper {
     public static Materia paraEntidade(MateriaRequisicao dto) {
         Materia materia = new Materia();
         materia.setNome(dto.nome());
+        materia.setCargaHoraria(dto.cargaHoraria());
         return materia;
     }
 

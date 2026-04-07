@@ -7,6 +7,8 @@ import java.util.List;
 public interface INotaRepo {
 
     Nota salvar(Nota nota);
+
     List<Nota> listarTodas();
+
     List<Nota> listarPorAluno(Integer idAluno);
 }

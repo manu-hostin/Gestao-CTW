@@ -3,9 +3,7 @@ package com.weg.ctw.mapper;
 import com.weg.ctw.domain.model.Sala;
 import com.weg.ctw.dto.requisicao.SalaRequisicao;
 import com.weg.ctw.dto.resposta.SalaResposta;
-import org.springframework.stereotype.Component;
 
-@Component
 public class SalaMapper {
 
     public static Sala toEntity(SalaRequisicao dto) {

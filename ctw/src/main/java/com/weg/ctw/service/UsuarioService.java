@@ -1,4 +1,0 @@
-package com.weg.ctw.service;
-
-public class UsuarioService {
-}
