@@ -45,4 +45,8 @@ public class AlunoService {
 
         return listaResposta;
     }
+
+    public void deletar(Integer id) {
+        alunoRepository.deletar(id);
+    }
 }

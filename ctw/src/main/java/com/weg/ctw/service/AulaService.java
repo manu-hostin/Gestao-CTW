@@ -49,4 +49,8 @@ public class AulaService {
 
         return listaResposta;
     }
+
+    public void deletar(Integer id) {
+        aulaRepository.deletar(id);
+    }
 }

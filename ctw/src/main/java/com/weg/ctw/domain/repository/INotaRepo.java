@@ -11,4 +11,6 @@ public interface INotaRepo {
     List<Nota> listarTodas();
 
     List<Nota> listarPorAluno(Integer idAluno);
+
+    void deletar(Integer id);
 }

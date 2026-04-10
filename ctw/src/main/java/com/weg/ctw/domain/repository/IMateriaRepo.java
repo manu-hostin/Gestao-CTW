@@ -10,4 +10,5 @@ public interface IMateriaRepo {
     Materia salvar(Materia materia);
     Optional<Materia> buscarPorId(Integer id);
     List<Materia> listarTodas();
+    void deletar(Integer id);
 }

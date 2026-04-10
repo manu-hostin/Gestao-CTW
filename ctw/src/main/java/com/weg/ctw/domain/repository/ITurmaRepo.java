@@ -12,4 +12,6 @@ public interface ITurmaRepo {
     Optional<Turma> buscarTurma(Integer id);
 
     List<Turma> buscarTurmas();
+
+    void deletar(Integer id);
 }

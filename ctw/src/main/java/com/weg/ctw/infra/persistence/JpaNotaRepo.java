@@ -24,4 +24,9 @@ public interface JpaNotaRepo extends JpaRepository<Nota, Integer>, INotaRepo {
     default Nota salvar(Nota nota) {
         return save(nota);
     }
+
+    @Override
+    default void deletar(Integer id) {
+        deleteById(id);
+    }
 }

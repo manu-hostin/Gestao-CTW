@@ -27,4 +27,11 @@ public class AulaController {
     public ResponseEntity<List<AulaResposta>> listarTodas() {
         return ResponseEntity.ok(service.listarTodas());
     }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+        service.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
 }

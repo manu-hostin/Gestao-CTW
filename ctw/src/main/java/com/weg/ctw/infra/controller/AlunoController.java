@@ -33,4 +33,10 @@ public class AlunoController {
                 com.weg.ctw.mapper.AlunoMapper.paraResposta(service.buscarPorId(id))
         );
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+        service.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
 }

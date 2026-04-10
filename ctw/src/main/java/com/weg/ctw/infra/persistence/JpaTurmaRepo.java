@@ -26,4 +26,9 @@ public interface JpaTurmaRepo extends JpaRepository<Turma, Integer>, ITurmaRepo 
     default Turma salvar(Turma turma) {
         return save(turma);
     }
+
+    @Override
+    default void deletar(Integer id) {
+        deleteById(id);
+    }
 }

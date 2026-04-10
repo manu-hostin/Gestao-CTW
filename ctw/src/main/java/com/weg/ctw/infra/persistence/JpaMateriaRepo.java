@@ -25,4 +25,9 @@ public interface JpaMateriaRepo extends JpaRepository<Materia, Integer>, IMateri
     default Materia salvar(Materia materia) {
         return save(materia);
     }
+
+    @Override
+    default void deletar(Integer id) {
+        deleteById(id);
+    }
 }

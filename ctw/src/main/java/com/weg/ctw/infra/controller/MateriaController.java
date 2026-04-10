@@ -34,4 +34,10 @@ public class MateriaController {
                 com.weg.ctw.mapper.MateriaMapper.paraResposta(service.buscarPorId(id))
         );
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+        service.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
 }

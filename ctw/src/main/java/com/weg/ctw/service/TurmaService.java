@@ -33,4 +33,9 @@ public class TurmaService {
         return repository.buscarTurma(id)
                 .orElseThrow(() -> new RuntimeException("Turma não encontrada com o ID: " + id));
     }
+
+    public void deletar(Integer id) {
+        repository.deletar(id);
+    }
+
 }

@@ -49,4 +49,8 @@ public class NotaService {
 
         return listaResposta;
     }
+
+    public void deletar(Integer id) {
+        repository.deletar(id);
+    }
 }
