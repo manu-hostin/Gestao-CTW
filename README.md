@@ -31,3 +31,19 @@ A organização de pastas segue o padrão de **Camadas Isoladas**:
 ├── infra     # Implementações: Banco de Dados e Configurações
 └── dto       # Objetos leves para tráfego de dados
 ````
+
+## Tecnologias Utilizadas
+
+| Tecnologia | Versão | Propósito |
+|-----------|--------|----------|
+| **Java** | 17+ | Linguagem principal |
+| **Spring Boot** | 3.x | Framework web |
+| **Hibernate/JPA** | - | ORM |
+| **MySQL** | 8.0+ | Banco de dados |
+
+### Benefícios dessa Arquitetura:
+- **Independência de Frameworks**: A camada `domain` não depende de Spring
+- **Testabilidade**: Facilita testes unitários isolados
+- **Reusabilidade**: Camadas podem ser reutilizadas em diferentes contextos
+- **Clareza**: Cada camada tem uma responsabilidade bem definida
+
