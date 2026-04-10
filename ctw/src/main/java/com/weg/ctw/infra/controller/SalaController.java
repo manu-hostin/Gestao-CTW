@@ -35,4 +35,10 @@ public class SalaController {
                 SalaMapper.toDTO(service.buscarPorId(id))
         );
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+        service.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
 }

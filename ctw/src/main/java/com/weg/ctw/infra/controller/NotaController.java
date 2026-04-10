@@ -27,4 +27,10 @@ public class NotaController {
     public ResponseEntity<List<NotaResposta>> listarPorAluno(@PathVariable Integer idAluno) {
         return ResponseEntity.ok(service.listarNotasDoAluno(idAluno));
     }
+    
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Integer id) {
+        service.deletar(id);
+        return ResponseEntity.noContent().build();
+    }
 }

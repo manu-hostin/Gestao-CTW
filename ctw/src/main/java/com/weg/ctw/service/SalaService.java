@@ -35,4 +35,8 @@ public class SalaService {
         }
         return respostas;
     }
+
+    public void deletar(Integer id) {
+        repository.deletar(id);
+    }
 }

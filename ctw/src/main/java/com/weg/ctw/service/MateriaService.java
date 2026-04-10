@@ -35,9 +35,13 @@ public class MateriaService {
         return listaResposta;
     }
 
-
     public Materia buscarPorId(Integer id) {
         return repository.buscarPorId(id)
                 .orElseThrow(() -> new RuntimeException("Matéria não encontrada com o ID: " + id));
+    }
+
+    
+    public void deletar(Integer id) {
+        repository.deletar(id);
     }
 }
