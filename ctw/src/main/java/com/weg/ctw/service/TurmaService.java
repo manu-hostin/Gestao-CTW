@@ -37,5 +37,4 @@ public class TurmaService {
     public void deletar(Integer id) {
         repository.deletar(id);
     }
-
 }

@@ -7,4 +7,5 @@ public interface INotaStrategy {
     boolean isTipo(Nota.TipoNota tipo);
 
     void validar(double valor);
+    
 }

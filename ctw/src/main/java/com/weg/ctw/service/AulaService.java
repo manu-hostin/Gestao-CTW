@@ -15,6 +15,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class AulaService {
+
     private final IAulaRepo aulaRepository;
     private final ProfessorService professorService;
     private final TurmaService turmaService;
