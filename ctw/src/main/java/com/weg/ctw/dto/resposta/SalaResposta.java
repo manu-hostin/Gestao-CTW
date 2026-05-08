@@ -4,6 +4,7 @@ public record SalaResposta(
         Integer id,
         String numeroSala,
         String tipo,
-        Integer capacidadeMax
+        Integer capacidadeMax,
+        boolean revisada
 ) {
 }

@@ -15,7 +15,7 @@ public interface JpaAlunoRepo extends JpaRepository<Aluno, Integer>, IAlunoRepo 
 
     // É quem fala com o banco e implementa a IAlunoRepo
     @Query("""
-            SELECT a FROM Aluno a 
+            SELECT a FROM Aluno a
             WHERE a.id = :id
             """)
     Optional<Aluno> buscarPorId(@Param("id") Integer id);

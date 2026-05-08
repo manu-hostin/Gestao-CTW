@@ -20,7 +20,8 @@ public class SalaMapper {
                 sala.getId(),
                 sala.getNumeroSala(),
                 sala.getTipo().name(),
-                sala.getCapacidadeMax()
+                sala.getCapacidadeMax(),
+                sala.isRevisada()
         );
     }
 }
