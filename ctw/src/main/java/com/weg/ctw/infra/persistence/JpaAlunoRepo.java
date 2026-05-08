@@ -13,20 +13,20 @@ import java.util.Optional;
 @Repository
 public interface JpaAlunoRepo extends JpaRepository<Aluno, Integer>, IAlunoRepo {
 
-    @Override
-    @Query("SELECT a FROM Aluno a WHERE a.id = :id")
+    // É quem fala com o banco e implementa a IAlunoRepo
+    @Query("""
+            SELECT a FROM Aluno a 
+            WHERE a.id = :id
+            """)
     Optional<Aluno> buscarPorId(@Param("id") Integer id);
 
-    @Override
     @Query("SELECT a FROM Aluno a")
     List<Aluno> listarTodos();
 
-    @Override
     default Aluno salvar(Aluno aluno) {
         return save(aluno);
     }
 
-    @Override
     default void deletar(Integer id) {
         deleteById(id);
     }

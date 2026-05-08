@@ -14,20 +14,16 @@ import java.util.Optional;
 public interface JpaTurmaRepo extends JpaRepository<Turma, Integer>, ITurmaRepo {
 
 
-    @Override
     @Query("SELECT t FROM Turma t WHERE t.id = :id")
     Optional<Turma> buscarTurma(@Param("id") Integer id);
 
-    @Override
     @Query("SELECT t FROM Turma t")
     List<Turma> buscarTurmas();
 
-    @Override
     default Turma salvar(Turma turma) {
         return save(turma);
     }
 
-    @Override
     default void deletar(Integer id) {
         deleteById(id);
     }

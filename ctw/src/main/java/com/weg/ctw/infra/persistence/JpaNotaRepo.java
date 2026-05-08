@@ -12,20 +12,17 @@ import java.util.List;
 @Repository
 public interface JpaNotaRepo extends JpaRepository<Nota, Integer>, INotaRepo {
 
-    @Override
     @Query("SELECT n FROM Nota n WHERE n.aluno.id = :idAluno")
     List<Nota> listarPorAluno(@Param("idAluno") Integer idAluno);
 
-    @Override
+
     @Query("SELECT n FROM Nota n")
     List<Nota> listarTodas();
 
-    @Override
     default Nota salvar(Nota nota) {
         return save(nota);
     }
 
-    @Override
     default void deletar(Integer id) {
         deleteById(id);
     }

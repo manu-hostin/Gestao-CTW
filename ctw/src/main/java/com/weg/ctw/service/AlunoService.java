@@ -22,7 +22,6 @@ public class AlunoService {
         Turma turma = turmaService.buscarPorId(dto.idTurma());
 
         Aluno aluno = AlunoMapper.paraEntidade(dto, turma);
-
         Aluno alunoSalvo = alunoRepository.salvar(aluno);
 
         return AlunoMapper.paraResposta(alunoSalvo);

@@ -13,20 +13,16 @@ import java.util.Optional;
 @Repository
 public interface JpaMateriaRepo extends JpaRepository<Materia, Integer>, IMateriaRepo {
 
-    @Override
     @Query("SELECT m FROM Materia m WHERE m.id = :id")
     Optional<Materia> buscarPorId(@Param("id") Integer id);
 
-    @Override
     @Query("SELECT m FROM Materia m")
     List<Materia> listarTodas();
 
-    @Override
     default Materia salvar(Materia materia) {
         return save(materia);
     }
 
-    @Override
     default void deletar(Integer id) {
         deleteById(id);
     }

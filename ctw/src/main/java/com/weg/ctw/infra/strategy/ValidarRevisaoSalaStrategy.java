@@ -8,8 +8,7 @@ import org.springframework.stereotype.Component;
 public class ValidarRevisaoSalaStrategy implements SalaDisponivelStrategy {
 
     @Override
-    public void validar (Sala sala) {
-
+    public void validar (Sala sala) { // A única regra de validação é a revisão da sala
         if (!sala.isRevisada()) {
             throw new RuntimeException("A sala " + sala.getNumeroSala() + " não pode ser utilizada pois não foi revisada!");
         }
